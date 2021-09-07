@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { SidebarService } from '../services/sidebar.service';
 
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styles: [
+  styleUrls: [
+    './pages.component.scss'
   ]
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+
+  constructor( public sidebarService: SidebarService) { }
 
   ngOnInit(): void {
   }

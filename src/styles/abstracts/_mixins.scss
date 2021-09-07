@@ -1,0 +1,83 @@
+
+
+// ======MENU🍔====
+
+@mixin base-menu (){
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+@mixin hamburger-icon($width, $height, $bg) {
+    
+    @content;
+    
+    position: relative;
+
+    width: $width;
+    height: $height;
+    
+    border-radius: $height / 2;
+
+    background-color: $bg;
+
+    &:before, &:after {
+        
+        content: '';
+
+        position: absolute;
+        top: -.9em;
+
+        display: block; 
+        width: $width;
+        height: $height;
+
+        background-color: $bg;
+        border-radius: $height / 2;
+        
+        transition: transform .2s;
+
+    }
+
+    &:after {
+        top: .9em;
+    }
+
+}
+
+@mixin close-icon(){
+    
+    @content;
+   
+    height: 0;  
+
+    &:before, &:after {
+
+        top: 0; 
+        transform: rotate(-45deg);
+
+    }
+
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+
+//======TEXT====//
+
+@mixin  base-text($fs, $fw, $c, $t-lgn: start, $lh: normal) {
+    font-size: $fs;
+    text-align: $t-lgn;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $c;
+}

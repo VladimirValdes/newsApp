@@ -1,0 +1,20 @@
+
+
+@mixin  base-button() {
+
+ position: relative;
+ z-index: 10;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65px;
+    padding: 16px;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer
+}
+
+

@@ -1,10 +1,22 @@
-<div>
+<div class="wrapper">
 
-    <app-header></app-header>
-</div>
+    <div
+      class="header">
+        <app-header></app-header>
+    </div>
+
+ <div
+      class="aside"
+      [ngClass]="{'aside--active': sidebarService.activateMenu}">
+        <app-sidebar></app-sidebar>    
+    </div>
 <main>
 
     <router-outlet></router-outlet>
 
 </main>
-<app-sidebar></app-sidebar>
+
+<footer>
+    <h1>footer</h1>
+</footer>
+</div>

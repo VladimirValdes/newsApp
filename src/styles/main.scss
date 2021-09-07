@@ -1,0 +1,39 @@
+
+
+// Abstracts files
+
+@import 'abstracts/palette';
+@import 'abstracts/mixins';
+
+
+// Core files
+@import 'core/typography';
+@import 'core/normalize';
+
+//layout
+
+@import 'layout/grid';
+
+
+html {
+    
+    font-family: $font-primary;
+    font-size: 62.5%;
+    
+}
+
+
+
+body {
+
+    background-color: $c-background;
+
+    .wrapper {
+         @include pancke-stack(); 
+         grid-template-areas: 
+         " header "
+         " main "
+         " footer ";
+
+    }
+}
