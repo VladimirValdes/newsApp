@@ -2,10 +2,8 @@
 @mixin  pancke-stack {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    // grid-template-columns: auto 1fr;
     min-height: 100vh;
 }
-
 
 @mixin  split-screen($area1, $area2, $j-items) {
     display: grid;
@@ -22,4 +20,19 @@
     grid-template-areas: 
     "#{$area1 $area1  $area2  $area2}";
     justify-items: $j-items;
+}
+
+
+@mixin hero-grid {
+    display: grid;
+    grid-template-columns: repeat( 2, auto );
+    grid-template-rows: repeat(2, auto);
+}
+
+@mixin child-grid ( $c-first, $c-last, $r-first, $r-last) {
+    grid-column-start: $c-first ;
+    grid-column-end:  $c-last;
+    grid-row-start: $r-first ;
+    grid-row-end:  $r-last;
+  
 }

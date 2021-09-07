@@ -10,7 +10,9 @@
       [ngClass]="{'aside--active': sidebarService.activateMenu}">
         <app-sidebar></app-sidebar>    
     </div>
-<main>
+<main
+  class="main"
+  [ngClass]="{'main--slide': false}">
 
     <router-outlet></router-outlet>
 
