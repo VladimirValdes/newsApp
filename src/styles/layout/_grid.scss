@@ -23,10 +23,11 @@
 }
 
 
-@mixin hero-grid {
+@mixin base-grid {
     display: grid;
     grid-template-columns: repeat( 2, auto );
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
 }
 
 @mixin child-grid ( $c-first, $c-last, $r-first, $r-last) {
@@ -35,4 +36,13 @@
     grid-row-start: $r-first ;
     grid-row-end:  $r-last;
   
+}
+
+
+@mixin base-flxResponsive() {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
