@@ -1,0 +1,31 @@
+
+.category {
+    width: 100%;
+    margin-top: 4rem;
+
+
+    &__heads {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    &__title {
+        @include base-text($fz-bs, $w-md, $c-primary);
+
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    .card {
+        flex: 1 1 285px;
+    }
+}

@@ -1,15 +1,18 @@
 
 
-.wrapper {
+.wrapper--home {
     width: 100%;
-    max-width: 1124px;
+    // max-width: 1124px;
+    height: auto;
     margin-top: 7rem;
+    padding: 0 2rem;
 
+    border: 1px solid green;
 }
 
 
 .hero {
-    margin: 0 auto;
+    height: auto;
 
 
     &__title {
@@ -30,7 +33,6 @@
         }
 
         .card {
-            @include base-card();
 
 
             &--first {
