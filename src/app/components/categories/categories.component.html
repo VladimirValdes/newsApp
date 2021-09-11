@@ -1,0 +1,14 @@
+<section class="category">
+    <section class="category__heads">
+        <h2 class="category__title">GENERAL</h2>
+        <h2 class="category__title"> SEE ALL ➡</h2>
+    </section>
+    <hr>
+    <section class="category__body">
+        <app-card 
+        class="card"
+            *ngFor="let article of articles"
+             [article]= 'article'>
+        </app-card>
+    </section>
+</section>

@@ -1,0 +1,18 @@
+<article class="card" >
+            <img class="card__img"
+                [src]="article.urlToImage"
+                alt="img-card">
+
+            <section class="card__body">
+                <h3>
+                    {{ article.title | ellipsis: 'title'  }}
+                </h3>
+                <p>
+                    {{ article.description | ellipsis }}
+                </p>
+            </section>
+            <footer class="card__footer">
+                <p class="card__pg card__pg--color"> {{ article.author}}</p>
+                <p class="card__pg">{{ article.publishedAt | date }}</p>
+            </footer>
+</article>
