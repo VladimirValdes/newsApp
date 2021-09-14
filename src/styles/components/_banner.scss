@@ -1,0 +1,92 @@
+@import '../responsive/mixins';
+ 
+ .hero-banner {
+
+     display: flex;
+     flex-flow: row wrap;
+     align-content: flex-end;
+     height: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+
+     &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+     &__body {
+        position: relative;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 1.5rem;
+     }
+
+     &__footer {
+        position: relative;
+
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 2rem 1.5rem;
+        background-color: rgba(0,0,0,0.6);
+     }
+
+     &__title {
+        @include base-text($fz-md, $w-md, $c-secondary);
+        margin: 0;
+     }
+
+     &__phf {
+        @include base-text($fz-sm, $w-sm, $c-secondary);
+        margin-top: 0;
+        &--end {
+            margin-top: auto;
+        }
+        span {
+            color: $c-hover;
+            font-weight: $w-bg;
+        }
+     }
+
+
+ }
+
+
+ // Responsive
+
+ @include respond-above(sm) {
+
+    .hero-banner {
+        align-items: center;
+        align-content: center;
+
+        &__body {
+            flex: 4 1 300px;
+        }
+
+
+        &__footer {
+            height: 100%;
+
+           
+        }
+
+        &__phf {
+                
+            &--end {
+                margin-top: 0;
+            }
+         }
+    }      
+}

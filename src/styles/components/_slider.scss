@@ -1,3 +1,4 @@
+@import '../responsive/mixins';
 
 .category {
     width: 100%;
@@ -19,13 +20,44 @@
 
     &__body {
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         gap: 1rem;
         margin-top: 3rem;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: $c-hover #e0e0e0;
+        padding-bottom: 32px;
+
+      
     }
 
     .card {
-        flex: 1 1 285px;
+        flex: 0 0 300px;
+        scroll-snap-align: start;
     }
+}
+
+@include respond-below(xs) {
+
+    .category {
+
+        .card {
+            width: 30px;
+        }
+
+    }
+
+}
+
+@include respond-above(lg) {
+
+    .category {
+
+        &__body {
+            justify-content: center;
+        }
+
+    }
+
 }

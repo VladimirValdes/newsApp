@@ -47,6 +47,19 @@ export class CategoriesComponent implements OnInit {
       publishedAt: "2021-08-30T21:44:40Z",
       content: "The last US aircraft has taken off from the Hamid Karzai Airport, Marine Corps General Kenneth McKenzie announced at a Pentagon briefing. \r\nThe flight departed just before midnight in Kabul on 31 Aug… [+69 chars]"
     },
+    {
+      source: {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      author: null,
+      title: "Watch moment US military declares final flight out of Afghanistan",
+      description: "Top US general reveals last US aircraft took off from Hamid Karzai Airport ahead of deadline for withdrawal.",
+      url: "https://www.bbc.co.uk/news/av/world-us-canada-58389751",
+      urlToImage: "https://ichef.bbci.co.uk/news/1024/branded_news/4A09/production/_120335981_p09tm2jq.jpg",
+      publishedAt: "2021-08-30T21:44:40Z",
+      content: "The last US aircraft has taken off from the Hamid Karzai Airport, Marine Corps General Kenneth McKenzie announced at a Pentagon briefing. \r\nThe flight departed just before midnight in Kabul on 31 Aug… [+69 chars]"
+    },
   ]
 
   constructor() { }

@@ -15,18 +15,13 @@ export class EllipsisPipe implements PipeTransform {
     
     if ( type == 'title' && characters > 65) {
 
-      text = text.slice(0, 65);
-      text += '...';
+          text = text.slice(0, 65) + '...';
      
-    } else if ( characters > 90) {
-
-      text = text.slice(0, 90);
-      text += '...';
-     
+    } else if ( characters > 115) {
+        text = text.slice(0, 115) + '...';
     } 
 
-    
-
+  
     return text;
   }
 
