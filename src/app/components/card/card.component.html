@@ -12,7 +12,7 @@
                 </p>
             </section>
             <footer class="card__footer">
-                <p class="card__pg card__pg--color"> {{ article.author}}</p>
+                <p class="card__pg card__pg--color"> {{ article.author | ellipsis: 'author' }}</p>
                 <p class="card__pg">{{ article.publishedAt | date }}</p>
             </footer>
 </article>

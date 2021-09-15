@@ -1,10 +1,12 @@
 <aside>
     <nav>
         <ul class="menu">
-            <li class="menu__item">
-                <a href="#" class="menu__link">General</a>
+            <li
+              *ngFor="let opt of sidebarService.menu"
+              class="menu__item">
+                <a href="#" class="menu__link">{{ opt.titulo }}</a>
             </li>
-            <li class="menu__item">
+            <!-- <li class="menu__item">
                 <a href="#" class="menu__link">Entertainment</a>
             </li>
             <li class="menu__item">
@@ -21,7 +23,7 @@
             </li>
             <li class="menu__item">
                 <a href="#" class="menu__link">Technology</a>
-            </li>
+            </li> -->
         </ul>
     </nav>
 </aside>

@@ -21,12 +21,11 @@
 
 
 
-    <app-categories></app-categories>
-    <app-categories></app-categories>
-    <app-categories></app-categories>
-    <app-categories></app-categories>
-    <app-categories></app-categories>
-    <app-categories></app-categories>
-    <app-categories></app-categories>
+    <app-categories
+    *ngFor="let category of newsCategories"
+      [category]="category">
+
+    </app-categories>
+
 
 

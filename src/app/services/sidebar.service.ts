@@ -6,6 +6,36 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
 
   public activateMenu = false;
+  public menu: any[] = [
+      {
+        titulo: 'General',
+        // icono: 'mdi mdi-gauge',
+      },
+      {
+        titulo: 'Entertainment',
+        // icono: 'mdi mdi-gauge',
+      },
+      {
+        titulo: 'Business',
+        // icono: 'mdi mdi-gauge',
+      },
+      {
+        titulo: 'Health',
+        // icono: 'mdi mdi-gauge',
+      },
+      {
+        titulo: 'Science',
+        // icono: 'mdi mdi-gauge',
+      },
+      {
+        titulo: 'Sports',
+        // icono: 'mdi mdi-gauge',
+      },
+      {
+        titulo: 'Technology',
+        // icono: 'mdi mdi-gauge',
+      },
+  ]
 
   constructor() { }
 
