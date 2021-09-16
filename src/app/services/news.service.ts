@@ -22,5 +22,9 @@ export class NewsService {
                       })
                     )
   }
+
+  showArticle( url: string ):void {
+      window.open(url, "_blank");
+  }
   
 }

@@ -1,4 +1,6 @@
-<article class="card" >
+<article
+  (click)="newsService.showArticle(article.url)"
+  class="card">
             <img class="card__img"
                 [src]="article.urlToImage"
                 alt="img-card">
