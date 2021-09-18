@@ -5,6 +5,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { CardComponent } from './card/card.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { HeroComponent } from './hero/hero.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 
@@ -12,16 +13,18 @@ import { HeroComponent } from './hero/hero.component';
   declarations: [
     CategoriesComponent,
     CardComponent,
-    HeroComponent
+    HeroComponent,
+    SliderComponent
   ],
   imports: [
     CommonModule,
     PipesModule,
-    DirectivesModule
+    DirectivesModule,
   ],
   exports: [
     CategoriesComponent,
-    CardComponent
+    CardComponent,
+    SliderComponent
   ]
 })
 export class ComponentsModule { }

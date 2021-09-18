@@ -11,13 +11,15 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
 import { DirectivesModule } from '../directives/directives.module';
+import { CategoryComponent } from './category/category.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    PagesComponent
+    PagesComponent,
+    CategoryComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,10 @@ import { DirectivesModule } from '../directives/directives.module';
     }
   ],
   exports: [
-    PagesComponent
+    PagesComponent,
+    HomeComponent,
+    PagesComponent,
+    CategoryComponent
   ]
 })
 export class PagesModule { }

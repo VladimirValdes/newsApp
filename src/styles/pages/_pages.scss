@@ -39,8 +39,8 @@
     grid-area: main;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 2.5rem 1rem;
+    overflow: hidden;
 
     //Modificar padding tablet layout
     // padding-lef-right: 2.5rem;

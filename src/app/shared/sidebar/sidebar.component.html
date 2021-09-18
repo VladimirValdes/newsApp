@@ -4,26 +4,13 @@
             <li
               *ngFor="let opt of sidebarService.menu"
               class="menu__item">
-                <a href="#" class="menu__link">{{ opt.titulo }}</a>
+               <a
+                  href="#"
+                  class="menu__link"
+                  [routerLink]="['category', opt.titulo]">
+                  {{ opt.titulo }}
+                </a>
             </li>
-            <!-- <li class="menu__item">
-                <a href="#" class="menu__link">Entertainment</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Business</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Health</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Science</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Sports</a>
-            </li>
-            <li class="menu__item">
-                <a href="#" class="menu__link">Technology</a>
-            </li> -->
         </ul>
     </nav>
 </aside>
