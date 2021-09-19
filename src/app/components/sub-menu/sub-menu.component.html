@@ -1,0 +1,11 @@
+<ul class="menu">
+    <li
+    *ngFor="let item of opt; let i = index"
+    class="menu__item">
+       <a
+          class="menu__link"
+          [ngClass]="{'menu__link--active': item.active }"
+          (click)="getNews( category, item.sortBy)">{{ item.name }}</a>
+        </li>
+ 
+ </ul>

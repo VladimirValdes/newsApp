@@ -1,0 +1,35 @@
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    
+    &__item {
+        width: 105px;
+        margin: 0.5rem;
+        cursor: pointer;
+
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem 0;
+        @include base-text($fz-sm, $w-sm, $c-primary);
+        text-align: center;
+        border: 1px solid $c-hover;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: $c-hover;
+            color: $c-secondary;
+            font-weight: $w-md;
+        }
+
+        &--active {
+            background-color: $c-hover;
+            color: $c-secondary;
+            font-weight: $w-md;
+        }
+    }
+}

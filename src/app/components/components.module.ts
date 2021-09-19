@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { HeroComponent } from './hero/hero.component';
 import { SliderComponent } from './slider/slider.component';
+import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
 
 
@@ -14,7 +15,8 @@ import { SliderComponent } from './slider/slider.component';
     CategoriesComponent,
     CardComponent,
     HeroComponent,
-    SliderComponent
+    SliderComponent,
+    SubMenuComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { SliderComponent } from './slider/slider.component';
   exports: [
     CategoriesComponent,
     CardComponent,
-    SliderComponent
+    SliderComponent,
+    SubMenuComponent
   ]
 })
 export class ComponentsModule { }

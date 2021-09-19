@@ -10,6 +10,11 @@ export class EllipsisPipe implements PipeTransform {
 
   transform( text: string, type = 'subtitle' ): string   {
 
+
+
+    if ( text == null) {
+        return text;
+    }
     
     const characters =  text.split('').length;
     

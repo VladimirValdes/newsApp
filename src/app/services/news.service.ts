@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 
@@ -11,11 +11,14 @@ const base_url = environment.base_url;
 })
 export class NewsService {
 
+  public newCategory: EventEmitter<string> = new EventEmitter<string>();
+
+
   constructor( private http: HttpClient) { }
 
 
-  getNewsByCategory( category = 'general', pSize = 10, page = 1 ) {
-    return this.http.get(`${ base_url }/everything?q=${ category }&pageSize=${ pSize }&page=${ page }`)
+  getNewsByCategory( category = 'general', sortBy = 'publishedAt', pSize = 10, page = 1 ) {
+    return this.http.get(`${ base_url }/everything?q=${ category }&sortBy=${ sortBy}&pageSize=${ pSize }&page=${ page }`)
                     .pipe( 
                       map( ( resp: any ) => {
                           return resp.articles;
@@ -26,5 +29,7 @@ export class NewsService {
   showArticle( url: string ):void {
       window.open(url, "_blank");
   }
+
+
   
 }

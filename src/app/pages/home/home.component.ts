@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.sidebarService.menu.forEach( (opt, index ) => {
-      this.newsService.getNewsByCategory(opt.titulo, 4).subscribe ( articles => {
+      this.newsService.getNewsByCategory(opt.titulo, '',4).subscribe ( articles => {
 
         const category = {
           titulo: opt.titulo,

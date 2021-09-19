@@ -1,3 +1,17 @@
 
    <app-slider></app-slider>
  
+   <section class="category-wrapper">
+      <h2 class="category__title">{{ category }}</h2>
+      <nav class="category__menu">
+         <app-sub-menu [category]='category' (news) = 'news = $event'></app-sub-menu>
+      
+      </nav>
+      <section class="category__body">
+         <app-card 
+         class="card"
+             *ngFor="let article of news"
+              [article]= 'article'>
+         </app-card>
+      </section>
+   </section>
