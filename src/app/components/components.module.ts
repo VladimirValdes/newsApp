@@ -7,6 +7,7 @@ import { DirectivesModule } from '../directives/directives.module';
 import { HeroComponent } from './hero/hero.component';
 import { SliderComponent } from './slider/slider.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -22,6 +23,7 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
     CommonModule,
     PipesModule,
     DirectivesModule,
+    RouterModule
   ],
   exports: [
     CategoriesComponent,

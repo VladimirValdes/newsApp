@@ -1,7 +1,11 @@
 <section class="category">
     <section class="category__heads">
         <h2 class="category__title">{{ category.titulo | uppercase }}</h2>
-        <h2 class="category__title"> SEE ALL ➡</h2>
+       <a
+          class="category__title  category__title--hover"
+          [routerLink]="[ '/category', category.titulo ]">
+          see all
+        </a>
     </section>
     <hr>
     <section class="category__body">

@@ -16,6 +16,12 @@
     &__title {
         @include base-text($fz-bs, $w-md, $c-primary);
 
+        &--hover {
+            &:hover {
+                color: $c-hover;
+            }
+        }
+
     }
 
     &__body {
