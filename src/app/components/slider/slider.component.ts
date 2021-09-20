@@ -1,7 +1,9 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { NewsService } from 'src/app/services/news.service';
 
-import Swiper from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
+Swiper.use([Navigation, Pagination]);
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
@@ -11,11 +13,19 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   swiper!: Swiper;
 
-  constructor() { }
+  @Input() category: string = '';
+  news: any[] = [];
+
+  constructor( private newsService: NewsService) { }
 
 
 
   ngOnInit(): void {
+    this.newsService.newCategory.subscribe( category => {
+         this.getNews( category );
+    })
+
+    this.getNews( this.category );
   }
 
   ngAfterViewInit(): void {
@@ -29,20 +39,31 @@ export class SliderComponent implements OnInit, AfterViewInit {
       pagination: {
         el: '.swiper-pagination',
       },
+      observer: true,
+      observeParents: true
     
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+      // // Navigation arrows
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
     
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
+      // // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
     });
     
   }
+
+  getNews( category: string) {
+    this.newsService.getNewsByCategory(category).subscribe( news  => {
+      this.news = news;
+
+      console.log( this.news );
+    })
+}
+
 
 
 

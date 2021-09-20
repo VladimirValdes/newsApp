@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 
 const base_url = environment.base_url;
@@ -18,10 +19,20 @@ export class NewsService {
 
 
   getNewsByCategory( category = 'general', sortBy = 'publishedAt', pSize = 10, page = 1 ) {
+    // return of([]);
     return this.http.get(`${ base_url }/everything?q=${ category }&sortBy=${ sortBy}&pageSize=${ pSize }&page=${ page }`)
                     .pipe( 
                       map( ( resp: any ) => {
                           return resp.articles;
+                      })
+                    )
+  }
+
+  getTopNews( category: string, pSize = 10, page = 1) {
+    return this.http.get(`${ base_url }/top-headlines?category=${ category }&pageSize=${ pSize }&page=${ page }`)
+                    .pipe(
+                      map( ( resp: any ) => {
+                        return resp.articles;
                       })
                     )
   }
