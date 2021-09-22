@@ -11,16 +11,48 @@ aside {
 
            
 
-            &__item {
+            // &__item {
                 
-                margin: 1.5em 0;
                 
-            }
+            //     &--active {
+                  
+            //     }
+            // }
 
 
             &__link {
+                display: flex;
+                align-items: center;
                 font-size: 1.5rem;
-                color: black;
+                color: #3c4043;
+                padding: 1rem 0;
+                padding-left: 3rem;
+
+                &--active {
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                    background-color: #e3edfe;
+                    font-weight: $w-bg;
+                    color: #2b65bd;
+                    
+                    .icon {
+                        filter: invert(0.4) sepia(0.5) saturate(9.7) hue-rotate(180deg) brightness(0.74);
+                    }
+                }
+
+                &:hover {
+                    color: #2b65bd;
+
+                    .icon {
+                        filter: invert(0.4) sepia(0.5) saturate(9.7) hue-rotate(180deg) brightness(0.74);
+                    }
+                }
+
+                .icon {
+                    margin-bottom: 0.5rem;
+                    margin-right: 0.5rem;
+
+                }
 
             }
 

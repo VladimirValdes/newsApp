@@ -9,31 +9,34 @@ export class SidebarService {
   public menu: any[] = [
       {
         titulo: 'General',
-        // icono: 'mdi mdi-gauge',
+        icono: 'general',
       },
       {
         titulo: 'Entertainment',
-        // icono: 'mdi mdi-gauge',
+        icono: 'entertainment',
       },
       {
         titulo: 'Business',
-        // icono: 'mdi mdi-gauge',
+        icono: 'business',
+
       },
       {
         titulo: 'Health',
-        // icono: 'mdi mdi-gauge',
+        icono: 'health',
       },
       {
         titulo: 'Science',
-        // icono: 'mdi mdi-gauge',
+        icono: 'science',
       },
       {
         titulo: 'Sports',
-        // icono: 'mdi mdi-gauge',
+        icono: 'sports',
+
       },
       {
         titulo: 'Technology',
-        // icono: 'mdi mdi-gauge',
+        icono: 'tech',
+
       },
   ]
 

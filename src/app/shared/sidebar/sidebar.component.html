@@ -7,7 +7,9 @@
                <a
                   href="#"
                   class="menu__link"
-                  [routerLink]="['category', opt.titulo]">
+                  [routerLink]="['category', opt.titulo]"
+                  routerLinkActive="menu__link--active">
+                  <img src='/assets/icons/{{ opt.icono }}.svg' class="icon" alt="icon">
                   {{ opt.titulo }}
                 </a>
             </li>
