@@ -19,13 +19,13 @@ export class NewsService {
 
 
   getNewsByCategory( category = 'general', sortBy = 'publishedAt', pSize = 10, page = 1 ) {
-    return of([]);
-    // return this.http.get(`${ base_url }/everything?q=${ category }&sortBy=${ sortBy}&pageSize=${ pSize }&page=${ page }`)
-    //                 .pipe( 
-    //                   map( ( resp: any ) => {
-    //                       return resp.articles;
-    //                   })
-    //                 )
+    // return of([]);
+    return this.http.get(`${ base_url }/everything?q=${ category }&sortBy=${ sortBy}&pageSize=${ pSize }&page=${ page }`)
+                    .pipe( 
+                      map( ( resp: any ) => {
+                          return resp.articles;
+                      })
+                    )
   }
 
   getTopNews( category: string, pSize = 10, page = 1) {

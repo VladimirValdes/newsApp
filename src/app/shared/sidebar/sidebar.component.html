@@ -1,11 +1,19 @@
 <aside>
     <nav>
         <ul class="menu">
+            <li class="menu__item">
+                <a
+                  class="menu__link"
+                  routerLink='/home'
+                  routerLinkActive="menu__link--active">
+                  <img src='/assets/icons/home.svg' class="icon" alt="icon">
+                  Home
+                </a>
+            </li>
             <li
               *ngFor="let opt of sidebarService.menu"
               class="menu__item">
                <a
-                  href="#"
                   class="menu__link"
                   [routerLink]="['category', opt.titulo]"
                   routerLinkActive="menu__link--active">
