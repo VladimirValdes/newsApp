@@ -1,9 +1,11 @@
 
 @import 'abstracts/palette';
 @import 'abstracts/mixins';
+@import 'core/typography';
+@import 'responsive/mixins';
 
 @import 'components/buttons';
+@import 'components/searchBar';
 
-@import 'core/typography';
 
 @import 'layout/header';

@@ -10,9 +10,14 @@ import { SidebarService } from 'src/app/services/sidebar.service';
 })
 export class HeaderComponent implements OnInit {
 
+  activeSearch = false;
   constructor( public sidebarService: SidebarService) { }
 
   ngOnInit(): void {
+  }
+
+  searchNews() {
+    // this.activeSearch = true;
   }
 
 

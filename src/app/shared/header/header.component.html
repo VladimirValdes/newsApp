@@ -1,6 +1,7 @@
 
 <header>
 
+<section class="left-ctrols">
     <button class="icon-menu"
         (click)="sidebarService.showMenu()">
         <span class="icon-menu__bar"></span>
@@ -11,16 +12,27 @@
             App News
         </a>
     </div>
-
+</section>
     
 
-<div class="search-input">
-    <input class="search-input__input" type="search" name="search-input"  placeholder="Search..." aria-label="Search">
-    <button class="search-input__btn">
-     <img src="/assets/icons/search.svg" alt="">
-    </button>
-</div>
-  
+<section class="right-ctrols">
+    <div class="search-input">
+        <input
+           (click)="searchNews()"
+           class="search-input__input"
+           type="search"
+           name="search-input"
+           placeholder="Search..."
+           aria-label="Search">
+         <button class="search-input__btn">
+          <img class="search-input__icon" src="/assets/icons/search.svg" alt="search">
+         </button>
+     </div>
+       
+</section>
+    
+
+
   
    
 
