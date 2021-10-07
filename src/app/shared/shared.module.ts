@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../directives/directives.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { DirectivesModule } from '../directives/directives.module';
   imports: [
     CommonModule,
     RouterModule,
-    DirectivesModule
+    DirectivesModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

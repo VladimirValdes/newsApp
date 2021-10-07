@@ -16,18 +16,19 @@
     
 
 <section class="right-ctrols">
-    <div class="search-input">
+    <form class="search-input"
+        (submit)="searchNews( term.value )">
         <input
-           (click)="searchNews()"
            class="search-input__input"
            type="search"
            name="search-input"
            placeholder="Search..."
-           aria-label="Search">
+           aria-label="Search"
+           #term>
          <button class="search-input__btn">
           <img class="search-input__icon" src="/assets/icons/search.svg" alt="search">
          </button>
-     </div>
+     </form>
        
 </section>
     

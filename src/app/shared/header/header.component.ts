@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SidebarService } from 'src/app/services/sidebar.service';
 
 @Component({
@@ -11,13 +12,22 @@ import { SidebarService } from 'src/app/services/sidebar.service';
 export class HeaderComponent implements OnInit {
 
   activeSearch = false;
-  constructor( public sidebarService: SidebarService) { }
+  constructor( public sidebarService: SidebarService,
+               private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  searchNews() {
-    // this.activeSearch = true;
+  searchNews( term: string ) {
+
+    if ( term.length == 0 ) {
+      console.log('Lo ejecute')
+      this.router.navigateByUrl('/');
+    } else  {
+
+      this.router.navigateByUrl(`/search/${ term }`);
+    }
+
   }
 
 

@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
 import { DirectivesModule } from '../directives/directives.module';
 import { CategoryComponent } from './category/category.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -19,7 +20,8 @@ import { CategoryComponent } from './category/category.component';
   declarations: [
     HomeComponent,
     PagesComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
